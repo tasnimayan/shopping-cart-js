@@ -101,8 +101,12 @@ function onProductChange(itemId, option){
   // Function to delete the item from the list
   if(option == "delete"){
     const section = document.getElementById(itemId);
-    section.remove();
-    ayan.deleteFromCart(itemId);
+    let isConfirm = confirm("Are you sure You want to remove this product from cart?");
+    if(isConfirm){
+      section.remove();
+      ayan.deleteFromCart(itemId);
+    }
+
   }
 
   // To update the cart summary at every change
