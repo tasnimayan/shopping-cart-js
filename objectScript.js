@@ -121,7 +121,7 @@ function cartSummary(){
   }
   let tax = (subTotalPrice * 5)/100;
   let total = subTotalPrice + tax;
-
+// Update the prices in the summary cart
   subTotal.innerHTML = `<span>$</span>` + subTotalPrice;
   taxTotal.innerHTML = `<span>$</span>` + tax.toFixed(2);
   totalPrice.innerHTML = `<span>$</span>` + total.toFixed(2);
